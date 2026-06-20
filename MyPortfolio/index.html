@@ -10,18 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0A0A0A;
-      --bg-soft: #101010;
-      --panel: rgba(237, 235, 229, 0.055);
-      --panel-strong: rgba(237, 235, 229, 0.09);
-      --line: rgba(237, 235, 229, 0.13);
-      --line-soft: rgba(237, 235, 229, 0.075);
-      --text: #EDEBE5;
-      --muted: rgba(237, 235, 229, 0.68);
-      --faint: rgba(237, 235, 229, 0.46);
-      --amber: #F5A623;
-      --blue: #3B5BDB;
-      --shadow: 0 26px 90px rgba(0, 0, 0, 0.42);
+      --bg: #f7fbff;
+      --bg-soft: #ffffff;
+      --panel: rgba(255, 255, 255, 0.82);
+      --panel-strong: rgba(255, 255, 255, 0.96);
+      --line: rgba(0, 24, 72, 0.14);
+      --line-soft: rgba(0, 24, 72, 0.08);
+      --text: #05070c;
+      --muted: rgba(5, 7, 12, 0.68);
+      --faint: rgba(5, 7, 12, 0.46);
+      --amber: #0047ff;
+      --blue: #001b5e;
+      --shadow: 0 24px 70px rgba(0, 27, 94, 0.16);
       --radius: 8px;
       --max: 1180px;
     }
@@ -43,6 +43,7 @@
       color: var(--text);
       background: var(--bg);
       font-family: "Inter", system-ui, sans-serif;
+      font-weight: 500;
       letter-spacing: 0;
     }
 
@@ -56,16 +57,11 @@
     }
 
     body::before {
-      opacity: 0.17;
-      mix-blend-mode: overlay;
-      background-image:
-        repeating-radial-gradient(circle at 22% 18%, rgba(255,255,255,0.22) 0 1px, transparent 1px 3px),
-        repeating-radial-gradient(circle at 70% 74%, rgba(255,255,255,0.12) 0 1px, transparent 1px 4px);
-      background-size: 220px 220px, 180px 180px;
+      display: none;
     }
 
     body::after {
-      box-shadow: inset 0 0 140px rgba(0, 0, 0, 0.78);
+      box-shadow: inset 0 0 120px rgba(0, 71, 255, 0.05);
       z-index: 999;
     }
 
@@ -105,21 +101,21 @@
       width: 8px;
       height: 8px;
       background: var(--amber);
-      box-shadow: 0 0 24px rgba(245, 166, 35, 0.8);
+      box-shadow: 0 0 24px rgba(0, 71, 255, 0.36);
     }
 
     .cursor-ring {
       width: 38px;
       height: 38px;
-      border: 1px solid rgba(245, 166, 35, 0.46);
+      border: 1px solid rgba(0, 71, 255, 0.46);
       transition: width 180ms ease, height 180ms ease, border-color 180ms ease, background 180ms ease;
     }
 
     .cursor-ring.is-active {
       width: 58px;
       height: 58px;
-      border-color: rgba(245, 166, 35, 0.72);
-      background: rgba(245, 166, 35, 0.07);
+      border-color: rgba(0, 71, 255, 0.72);
+      background: rgba(0, 71, 255, 0.07);
     }
 
     .site-nav {
@@ -148,10 +144,10 @@
     }
 
     .site-nav.is-scrolled .nav-inner {
-      border-color: rgba(237, 235, 229, 0.12);
-      background: rgba(10, 10, 10, 0.68);
+      border-color: rgba(0, 24, 72, 0.12);
+      background: rgba(255, 255, 255, 0.84);
       backdrop-filter: blur(18px);
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.36);
+      box-shadow: 0 18px 50px rgba(0, 27, 94, 0.12);
     }
 
     .logo {
@@ -173,7 +169,7 @@
       gap: 30px;
       color: var(--muted);
       font-size: 0.91rem;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .nav-links a {
@@ -198,7 +194,7 @@
     .nav-links a::before {
       bottom: 4px;
       height: 1px;
-      background: linear-gradient(90deg, var(--amber), rgba(245, 166, 35, 0));
+      background: linear-gradient(90deg, var(--amber), rgba(0, 71, 255, 0));
       opacity: 0.9;
     }
 
@@ -206,7 +202,7 @@
       inset: 5px -10px auto;
       height: 24px;
       border-radius: 999px;
-      background: radial-gradient(circle at 50% 50%, rgba(245, 166, 35, 0.18), transparent 66%);
+      background: radial-gradient(circle at 50% 50%, rgba(0, 71, 255, 0.13), transparent 66%);
       opacity: 0;
       z-index: -1;
     }
@@ -228,29 +224,29 @@
       justify-content: center;
       min-height: 46px;
       padding: 0 20px;
-      border: 1px solid rgba(237, 235, 229, 0.18);
+      border: 1px solid rgba(0, 24, 72, 0.18);
       border-radius: 8px;
       color: var(--text);
-      background: rgba(237, 235, 229, 0.045);
-      font-weight: 800;
+      background: rgba(255, 255, 255, 0.68);
+      font-weight: 700;
       transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      border-color: rgba(245, 166, 35, 0.52);
-      background: rgba(245, 166, 35, 0.1);
+      border-color: rgba(0, 71, 255, 0.34);
+      background: rgba(0, 71, 255, 0.08);
     }
 
     .btn-primary {
-      border-color: rgba(245, 166, 35, 0.86);
-      color: #111;
+      border-color: rgba(0, 71, 255, 0.86);
+      color: #fff;
       background: var(--amber);
     }
 
     .btn-primary:hover {
-      color: #111;
-      background: #ffc05a;
+      color: #fff;
+      background: #001b5e;
     }
 
     .hero {
@@ -269,16 +265,16 @@
       z-index: -3;
       opacity: 0.34;
       background:
-        linear-gradient(118deg, rgba(245, 166, 35, 0.55) 0%, rgba(194, 65, 25, 0.42) 44%, rgba(82, 20, 16, 0.18) 100%),
+        linear-gradient(118deg, rgba(255, 255, 255, 0.72) 0%, rgba(0, 71, 255, 0.18) 46%, rgba(0, 27, 94, 0.12) 100%),
         repeating-linear-gradient(
           180deg,
-          rgba(255, 227, 164, 0.16) 0,
-          rgba(255, 227, 164, 0.08) 2px,
-          rgba(245, 166, 35, 0.055) 9px,
-          rgba(20, 8, 6, 0.18) 17px,
-          rgba(0, 0, 0, 0.34) 23px,
-          rgba(255, 196, 96, 0.07) 24px,
-          rgba(255, 196, 96, 0.07) 26px
+          rgba(0, 71, 255, 0.10) 0,
+          rgba(0, 71, 255, 0.06) 2px,
+          rgba(255, 255, 255, 0.24) 9px,
+          rgba(0, 27, 94, 0.08) 17px,
+          rgba(255, 255, 255, 0.28) 23px,
+          rgba(0, 71, 255, 0.05) 24px,
+          rgba(0, 71, 255, 0.05) 26px
         );
       background-blend-mode: soft-light, normal;
       mask-image: radial-gradient(circle at 58% 42%, black 0, rgba(0, 0, 0, 0.82) 34%, transparent 76%);
@@ -292,9 +288,9 @@
       opacity: 0.54;
       filter: blur(54px);
       background:
-        radial-gradient(circle at 18% 28%, rgba(245, 166, 35, 0.46), transparent 26%),
-        radial-gradient(circle at 72% 18%, rgba(59, 91, 219, 0.32), transparent 24%),
-        radial-gradient(circle at 64% 76%, rgba(232, 69, 35, 0.32), transparent 28%);
+        radial-gradient(circle at 18% 28%, rgba(255, 255, 255, 0.9), transparent 26%),
+        radial-gradient(circle at 72% 18%, rgba(0, 71, 255, 0.25), transparent 24%),
+        radial-gradient(circle at 64% 76%, rgba(0, 27, 94, 0.18), transparent 28%);
       animation: ambientDrift 16s ease-in-out infinite alternate;
     }
 
@@ -323,7 +319,7 @@
 
     .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.82fr);
+      grid-template-columns: minmax(0, 1.02fr) minmax(300px, 0.82fr);
       align-items: center;
       gap: 56px;
     }
@@ -349,16 +345,20 @@
 
     h1,
     h2,
-    h3 {
-      font-family: "Space Grotesk", sans-serif;
-      letter-spacing: 0;
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Creato Display", sans-serif;
+      font-weight: 700px;
+      letter-spacing: 0px;
     }
 
     .hero-title {
       max-width: 740px;
       font-size: clamp(4.4rem, 10vw, 9.8rem);
       line-height: 0.88;
-      font-weight: 700;
+      font-weight: 900;
     }
 
     .title-line {
@@ -379,6 +379,7 @@
       margin-top: 28px;
       color: var(--muted);
       font-size: clamp(1rem, 1.55vw, 1.18rem);
+      font-weight: 500;
       line-height: 1.78;
     }
 
@@ -391,44 +392,108 @@
 
     .portrait-wrap {
       position: relative;
-      min-height: 620px;
+      min-height: clamp(420px, 58vw, 620px);
       align-self: stretch;
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: center;
+      overflow: visible;
     }
 
-    .portrait-wrap::before {
-      content: "";
-      position: absolute;
-      inset: 11% 4% 4%;
-      border: 1px solid rgba(237, 235, 229, 0.12);
-      border-radius: 50% 50% 8px 8px / 34% 34% 8px 8px;
-      background:
-        radial-gradient(circle at 50% 16%, rgba(245, 166, 35, 0.15), transparent 34%),
-        linear-gradient(180deg, rgba(237, 235, 229, 0.055), rgba(237, 235, 229, 0.018));
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), var(--shadow);
-    }
-
+    .portrait-wrap::before,
     .portrait-wrap::after {
       content: "";
       position: absolute;
-      left: 11%;
-      right: 5%;
-      bottom: 0;
-      height: 26%;
-      background: linear-gradient(180deg, transparent, rgba(10, 10, 10, 0.92) 70%);
+      border-radius: 50%;
       pointer-events: none;
     }
 
-    .portrait {
+    .portrait-wrap::before {
+      width: min(108%, 600px);
+      aspect-ratio: 1;
+      right: 50%;
+      bottom: -8px;
+      transform: translateX(50%);
+      z-index: 0;
+      background:
+        radial-gradient(circle at 50% 33%, rgba(255, 255, 255, 0.72), transparent 22%),
+        radial-gradient(circle at 50% 50%, rgba(0, 71, 255, 0.22), rgba(0, 71, 255, 0.08) 48%, transparent 72%);
+      filter: blur(34px);
+      opacity: 0.78;
+    }
+
+    .portrait-wrap::after {
+      width: min(62%, 320px);
+      aspect-ratio: 1;
+      top: 18px;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+      background:
+        radial-gradient(circle, rgba(0, 71, 255, 0.28), rgba(0, 27, 94, 0.12) 44%, transparent 72%);
+      filter: blur(28px);
+      opacity: 0.72;
+    }
+
+    .portrait-orb {
       position: relative;
       z-index: 2;
-      width: min(92%, 520px);
-      max-height: 78vh;
+      width: min(94%, 520px);
+      aspect-ratio: 1 / 1;
+      overflow: visible;
+      border: 1px solid rgba(0, 24, 72, 0.14);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 24%, rgba(255, 255, 255, 0.82), transparent 32%),
+        radial-gradient(circle at 58% 70%, rgba(0, 71, 255, 0.18), transparent 38%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(220, 233, 255, 0.9));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.82),
+        inset 0 -28px 54px rgba(0, 27, 94, 0.12),
+        var(--shadow);
+    }
+
+    .portrait-orb::after {
+      content: "";
+      position: absolute;
+      inset: 58% 0 0;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.72), transparent 28%),
+        linear-gradient(180deg, transparent, rgba(0, 27, 94, 0.08));
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .portrait-outside,
+    .portrait-mask {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .portrait-outside {
+      z-index: 3;
+      overflow: visible;
+      clip-path: inset(0 0 40% 0);
+    }
+
+    .portrait-mask {
+      z-index: 2;
+      border-radius: 50%;
+      overflow:hidden;
+    }
+
+    .portrait {
+      position: absolute;
+      left: 50%;
+      top: -3%;
+      width: 100%;
+      max-width: none;
+      transform: translateX(-50%);
       object-fit: contain;
       object-position: bottom center;
-      filter: drop-shadow(0 34px 48px rgba(0, 0, 0, 0.48)) saturate(0.96) contrast(1.04);
+      filter: drop-shadow(0 28px 38px rgba(0, 27, 94, 0.24)) saturate(1.02) contrast(1.03);
     }
 
     .hero-meta {
@@ -458,25 +523,6 @@
       text-transform: uppercase;
     }
 
-    .scroll-line {
-      position: relative;
-      width: 1px;
-      height: 42px;
-      overflow: hidden;
-      background: rgba(237, 235, 229, 0.18);
-    }
-
-    .scroll-line::after {
-      content: "";
-      position: absolute;
-      top: -22px;
-      left: 0;
-      width: 1px;
-      height: 22px;
-      background: var(--amber);
-      animation: scrollDrop 1.8s ease-in-out infinite;
-    }
-
     .stats {
       display: grid;
       grid-template-columns: repeat(3, auto);
@@ -488,7 +534,7 @@
       padding: 14px 16px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: rgba(10, 10, 10, 0.44);
+      background: rgba(255, 255, 255, 0.82);
       backdrop-filter: blur(12px);
     }
 
@@ -530,6 +576,7 @@
     .section-title {
       max-width: 760px;
       font-size: clamp(2.3rem, 4.8vw, 5rem);
+      font-weight: 900px;
       line-height: 0.98;
     }
 
@@ -569,8 +616,8 @@
       padding: 0 12px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      color: rgba(237, 235, 229, 0.78);
-      background: rgba(237, 235, 229, 0.035);
+      color: rgba(5, 7, 12, 0.78);
+      background: rgba(255, 255, 255, 0.72);
       font-size: 0.84rem;
       font-weight: 800;
     }
@@ -588,7 +635,7 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--panel);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
     }
 
     .highlight-card {
@@ -598,7 +645,7 @@
 
     .highlight-card:hover {
       transform: translateX(12px);
-      border-color: rgba(245, 166, 35, 0.34);
+      border-color: rgba(0, 71, 255, 0.34);
       background: var(--panel-strong);
     }
 
@@ -610,7 +657,7 @@
       margin-bottom: 18px;
       border-radius: 8px;
       color: var(--amber);
-      background: rgba(245, 166, 35, 0.1);
+      background: rgba(0, 71, 255, 0.1);
       font-weight: 900;
     }
 
@@ -643,7 +690,7 @@
       overflow: hidden;
       margin-top: 24px;
       border-radius: 999px;
-      background: rgba(237, 235, 229, 0.1);
+      background: rgba(0, 24, 72, 0.1);
     }
 
     .progress span {
@@ -666,20 +713,20 @@
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: rgba(237, 235, 229, 0.045);
+      background: rgba(255, 255, 255, 0.82);
       box-shadow: var(--shadow);
       transform-style: preserve-3d;
       transition: transform 220ms ease, border-color 220ms ease;
     }
 
     .project-card:hover {
-      border-color: rgba(245, 166, 35, 0.38);
+      border-color: rgba(0, 71, 255, 0.38);
     }
 
     .project-img {
       aspect-ratio: 16 / 10;
       overflow: hidden;
-      background: #151515;
+      background: #e7eefc;
     }
 
     .project-img img {
@@ -707,8 +754,8 @@
       min-height: 28px;
       padding: 0 10px;
       border-radius: 999px;
-      color: var(--amber);
-      background: rgba(245, 166, 35, 0.1);
+      color: var(--blue);
+      background: rgba(0, 71, 255, 0.1);
       font-size: 0.72rem;
       font-weight: 900;
       letter-spacing: 0.11em;
@@ -752,12 +799,12 @@
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: rgba(237, 235, 229, 0.045);
+      background: rgba(255, 255, 255, 0.82);
     }
 
     .design-image {
       aspect-ratio: 16 / 9;
-      background: #141414;
+      background: #e7eefc;
     }
 
     .design-image img {
@@ -780,8 +827,8 @@
 
     .status-badge {
       flex: 0 0 auto;
-      color: rgba(237, 235, 229, 0.82);
-      background: rgba(59, 91, 219, 0.18);
+      color: #ffffff;
+      background: var(--blue);
     }
 
     .edu-card {
@@ -789,8 +836,8 @@
     }
 
     .edu-card.gold {
-      border-color: rgba(245, 166, 35, 0.34);
-      background: linear-gradient(135deg, rgba(245, 166, 35, 0.12), rgba(237, 235, 229, 0.045));
+      border-color: rgba(0, 71, 255, 0.34);
+      background: linear-gradient(135deg, rgba(0, 71, 255, 0.12), rgba(255, 255, 255, 0.9));
     }
 
     .edu-meta {
@@ -810,11 +857,11 @@
       gap: 24px;
       margin-top: 18px;
       padding: 26px;
-      border: 1px solid rgba(59, 91, 219, 0.42);
+      border: 1px solid rgba(0, 71, 255, 0.32);
       border-radius: 8px;
       background:
-        radial-gradient(circle at 12% 30%, rgba(59, 91, 219, 0.22), transparent 32%),
-        rgba(237, 235, 229, 0.045);
+        radial-gradient(circle at 12% 30%, rgba(0, 71, 255, 0.18), transparent 32%),
+        rgba(255, 255, 255, 0.86);
     }
 
     .internship h3 {
@@ -833,13 +880,14 @@
       height: 8px;
       border-radius: 999px;
       background: var(--amber);
-      box-shadow: 0 0 0 rgba(245, 166, 35, 0.65);
+      box-shadow: 0 0 0 rgba(0, 71, 255, 0.5);
       animation: pulse 1.7s infinite;
     }
 
     .contact-title {
       max-width: 540px;
       font-size: clamp(2.6rem, 5vw, 5.4rem);
+      font-weight: 900;
       line-height: 0.96;
     }
 
@@ -860,7 +908,7 @@
 
     .contact-row:hover {
       transform: translateX(10px);
-      border-color: rgba(245, 166, 35, 0.34);
+      border-color: rgba(0, 71, 255, 0.34);
       background: var(--panel-strong);
     }
 
@@ -898,7 +946,7 @@
       border: 1px solid var(--line);
       border-radius: 8px;
       color: var(--text);
-      background: rgba(0, 0, 0, 0.26);
+      background: rgba(255, 255, 255, 0.86);
       outline: none;
       padding: 15px 16px;
       transition: border-color 180ms ease, background 180ms ease;
@@ -911,8 +959,8 @@
 
     .form-field input:focus,
     .form-field textarea:focus {
-      border-color: rgba(245, 166, 35, 0.5);
-      background: rgba(0, 0, 0, 0.36);
+      border-color: rgba(0, 71, 255, 0.5);
+      background: #ffffff;
     }
 
     .footer {
@@ -948,7 +996,7 @@
 
     .socials a:hover {
       transform: translateY(-2px);
-      border-color: rgba(245, 166, 35, 0.45);
+      border-color: rgba(0, 71, 255, 0.45);
     }
 
     @keyframes scrollDrop {
@@ -957,9 +1005,9 @@
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.58); }
-      70% { box-shadow: 0 0 0 12px rgba(245, 166, 35, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(0, 71, 255, 0.45); }
+      70% { box-shadow: 0 0 0 12px rgba(0, 71, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 71, 255, 0); }
     }
 
     @keyframes ambientDrift {
@@ -982,6 +1030,8 @@
       .hero {
         min-height: auto;
         padding-top: 116px;
+        justify-content: center;
+        text-align: center;
       }
 
       .hero-inner,
@@ -990,8 +1040,25 @@
         grid-template-columns: 1fr;
       }
 
+      .hero-inner {
+        justify-items: center;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
       .portrait-wrap {
-        min-height: 520px;
+        min-height: 500px;
+        align-self: auto;
+      }
+
+      .portrait-orb {
+        width: min(76vw, 470px);
+      }
+
+      .portrait {
+        width: min(76vw, 460px);
       }
 
       .hero-meta {
@@ -1050,7 +1117,16 @@
       }
 
       .portrait-wrap {
-        min-height: 430px;
+        min-height: auto;
+        padding-top: 18px;
+      }
+
+      .portrait-orb {
+        width: min(88vw, 410px);
+      }
+
+      .portrait {
+        width: min(80vw, 380px);
       }
 
       .stats {
@@ -1065,6 +1141,42 @@
       .design-body {
         align-items: start;
         flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        flex: 1 1 100%;
+        justify-content: center;
+      }
+
+      .contact-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero {
+        padding-top: 98px;
+      }
+
+      .hero-title {
+        font-size: clamp(3rem, 18vw, 3.9rem);
+      }
+
+      .hero-copy {
+        font-size: 0.98rem;
+      }
+
+      .section-title,
+      .contact-title {
+        font-size: clamp(2.05rem, 12vw, 3.2rem);
+      }
+
+      .project-body,
+      .skill-card,
+      .edu-card,
+      .form-card {
+        padding: 20px;
       }
     }
 
@@ -1111,29 +1223,26 @@
       <div class="glow glow-blue" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-content">
-          <p class="eyebrow hero-eyebrow">Software Engineer · Graphic Designer · IT Student</p>
+          <p class="eyebrow hero-eyebrow">Software Engineer &middot; Graphic Designer &middot; IT Student</p>
           <h1 class="hero-title" aria-label="Ezekiel Narh.">
             <span class="title-line"><span>Ezekiel</span></span>
             <span class="title-line"><span class="accent">Narh.</span></span>
           </h1>
           <p class="hero-copy">I build polished web experiences, design expressive campaign visuals, and study Information Technology at Pentecost University while preparing for an internship with Volta River Authority in Ghana.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary hoverable" href="#work">View My Work →</a>
+            <a class="btn btn-primary hoverable" href="#work">View My Work &rarr;</a>
             <a class="btn hoverable" href="#contact">Get In Touch</a>
             <a class="btn hoverable" href="assets/Ezekiel_Narh_CV.docx" download>Download CV</a>
           </div>
         </div>
         <div class="portrait-wrap" aria-label="Portrait of Ezekiel Narh">
-          <img class="portrait" src="assets/ezekiel-cutout.png" alt="Ezekiel Narh in a navy suit" />
-        </div>
-      </div>
-      <div class="hero-meta">
-        <div class="container hero-meta-inner">
-          <div class="scroll-indicator"><span class="scroll-line"></span> Scroll</div>
-          <div class="stats" aria-label="Portfolio stats">
-            <div class="stat"><strong><span class="counter" data-target="4">0</span>+</strong><span>Projects</span></div>
-            <div class="stat"><strong><span class="counter" data-target="2">0</span>+</strong><span>Disciplines</span></div>
-            <div class="stat"><strong><span class="counter" data-target="1">0</span>×</strong><span>Cisco Cert</span></div>
+          <div class="portrait-orb">
+            <div class="portrait-outside" aria-hidden="true">
+              <img class="portrait" src="assets/ezekiel-cutout.png" alt="" />
+            </div>
+            <div class="portrait-mask">
+              <img class="portrait" src="assets/ezekiel-cutout.png" alt="Ezekiel Narh in a navy suit" />
+            </div>
           </div>
         </div>
       </div>
@@ -1288,14 +1397,14 @@
             <div class="design-image"><img src="assets/hajeni-laundry.png" alt="Hajeni Laundry campaign Photoshop work in progress" /></div>
             <div class="design-body">
               <h3>Hajeni Laundry Campaign</h3>
-              <span class="status-badge">Work in Progress</span>
+              <span class="status-badge">Completed</span>
             </div>
           </article>
           <article class="design-card hoverable">
             <div class="design-image"><img src="assets/fellowship-with-us.png" alt="Fellowship With Us Assemblies of God Photoshop work in progress" /></div>
             <div class="design-body">
-              <h3>Fellowship With Us — Assemblies of God</h3>
-              <span class="status-badge">Work in Progress</span>
+              <h3>Fellowship With Us - Assemblies of God</h3>
+              <span class="status-badge">Completed</span>
             </div>
           </article>
         </div>
@@ -1315,7 +1424,7 @@
             <div class="card-icon">PU</div>
             <h3>Pentecost University</h3>
             <p>BSc Information Technology, focused on software, data, networking, and applied computing.</p>
-            <span class="edu-meta">2024 – Present</span>
+            <span class="edu-meta">2024 - Present</span>
           </article>
           <article class="edu-card">
             <div class="card-icon">SHS</div>
@@ -1355,7 +1464,7 @@
             <a class="contact-row hoverable" href="mailto:nakielyaw@gmail.com"><span>Email</span><strong>nakielyaw@gmail.com</strong></a>
             <a class="contact-row hoverable" href="tel:+233507247171"><span>Phone</span><strong>0507247171</strong></a>
             <a class="contact-row hoverable" href="https://www.linkedin.com/in/ezekiel-narh-4a03b9366" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>ezekiel-narh</strong></a>
-            <a class="contact-row hoverable" href="https://github.com/CoddyNa/Data-Communication-Assignment" target="_blank" rel="noreferrer"><span>GitHub</span><strong>CoddyNa</strong></a>
+            <a class="contact-row hoverable" href="https://github.com/CoddyNa" target="_blank" rel="noreferrer"><span>GitHub</span><strong>CoddyNa</strong></a>
           </div>
         </div>
         <form class="form-card" id="contactForm">
@@ -1380,10 +1489,10 @@
   <footer class="footer">
     <div class="container footer-inner">
       <a class="logo hoverable" href="#home">EN<span class="logo-dot">.</span></a>
-      <p>© 2025 · Built with passion in Ghana 🇬🇭</p>
+      <p>&copy; 2025 &middot; Built with passion in Ghana</p>
       <div class="socials" aria-label="Social links">
         <a class="hoverable" href="https://www.linkedin.com/in/ezekiel-narh-4a03b9366" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
-        <a class="hoverable" href="https://github.com/CoddyNa/Data-Communication-Assignment" target="_blank" rel="noreferrer" aria-label="GitHub">gh</a>
+        <a class="hoverable" href="https://github.com/CoddyNa" target="_blank" rel="noreferrer" aria-label="GitHub">gh</a>
         <a class="hoverable" href="mailto:nakielyaw@gmail.com" aria-label="Email">@</a>
       </div>
     </div>
