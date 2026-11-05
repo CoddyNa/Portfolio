@@ -79,22 +79,98 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
       });
 
       gsap.utils.toArray(".reveal").forEach((section) => {
-        gsap.from(section, {
-          opacity: 0,
-          y: 40,
-          duration: 0.85,
-          ease: "power2.out",
-          scrollTrigger: { trigger: section, start: "top 82%" }
+        const title = section.querySelector(".section-title, .contact-title");
+        const note = section.querySelector(".section-note");
+        const kicker = section.querySelector(".kicker");
+        const cards = section.querySelectorAll(".highlight-card, .skill-card, .project-card, .design-card, .edu-card, .contact-row, .form-card, .exp-card");
+        const images = section.querySelectorAll(".project-img img, .design-image img");
+        const tags = section.querySelectorAll(".tag");
+        const internship = section.querySelector(".internship");
+        const expEntries = section.querySelectorAll(".exp-entry");
+        const copy = section.querySelectorAll(".copy-stack p");
+
+        const tl = gsap.timeline({
+          defaults: { ease: "power3.out" },
+          scrollTrigger: {
+            trigger: section,
+            start: "top 78%",
+            toggleActions: "play none none reverse"
+          }
         });
+
+        tl.from(section, { autoAlpha: 0, y: 34, duration: 0.55 });
+
+        if (kicker) {
+          tl.from(kicker, { autoAlpha: 0, x: -18, duration: 0.45 }, "-=0.28");
+        }
+
+        if (title) {
+          tl.from(title, {
+            autoAlpha: 0,
+            y: 34,
+            scale: 0.96,
+            transformOrigin: "left center",
+            duration: 0.75
+          }, "-=0.28");
+        }
+
+        if (note) {
+          tl.from(note, { autoAlpha: 0, y: 18, duration: 0.55 }, "-=0.5");
+        }
+
+        if (copy.length) {
+          tl.from(copy, { autoAlpha: 0, y: 22, duration: 0.55, stagger: 0.08 }, "-=0.32");
+        }
+
+        if (tags.length) {
+          tl.from(tags, { autoAlpha: 0, y: 14, scale: 0.92, duration: 0.45, stagger: 0.04 }, "-=0.22");
+        }
+
+        if (cards.length) {
+          tl.from(cards, {
+            autoAlpha: 0,
+            y: 42,
+            rotateX: 5,
+            duration: 0.68,
+            stagger: 0.08,
+            clearProps: "transform"
+          }, "-=0.2");
+        }
+
+        if (internship) {
+          tl.from(internship, { autoAlpha: 0, y: 30, scale: 0.98, duration: 0.65 }, "-=0.16");
+        }
+
+        if (expEntries.length) {
+          tl.from(expEntries, {
+            autoAlpha: 0,
+            x: -28,
+            duration: 0.65,
+            stagger: 0.14,
+            clearProps: "transform"
+          }, "-=0.18");
+        }
+
+        if (images.length) {
+          gsap.from(images, {
+            scale: 1.12,
+            duration: 1.15,
+            ease: "power2.out",
+            scrollTrigger: { trigger: section, start: "top 72%", toggleActions: "play none none reverse" }
+          });
+        }
       });
 
-      gsap.utils.toArray(".section-title, .contact-title").forEach((title) => {
-        gsap.from(title, {
-          scale: 0.94,
-          transformOrigin: "left center",
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: { trigger: title, start: "top 86%" }
+      gsap.utils.toArray(".design-card").forEach((card) => {
+        gsap.to(card, {
+          yPercent: -4,
+          ease: "none",
+          scrollTrigger: {
+            trigger: card,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
         });
       });
 

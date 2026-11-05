@@ -22,6 +22,7 @@
         <a class="hoverable" href="#about">About</a>
         <a class="hoverable" href="#work">Work</a>
         <a class="hoverable" href="#design">Design</a>
+        <a class="hoverable" href="#experience">Experience</a>
         <a class="hoverable" href="#education">Education</a>
         <a class="hoverable" href="#contact">Contact</a>
       </div>
@@ -42,7 +43,7 @@
             <span class="title-line"><span>Ezekiel</span></span>
             <span class="title-line"><span class="accent">Narh.</span></span>
           </h1>
-          <p class="hero-copy">I build polished web experiences, design intuitive UI/UX prototypes, and study Information Technology at Pentecost University after completing an internship with Volta River Authority in Ghana.</p>
+          <p class="hero-copy">I build polished web experiences, design intuitive UI/UX prototypes, and develop full-stack platforms — studying Information Technology at Pentecost University with hands-on experience from the Volta River Authority internship.</p>
           <div class="hero-actions">
             <a class="btn btn-primary hoverable" href="#work">View My Work &rarr;</a>
             <a class="btn hoverable" href="#contact">Get In Touch</a>
@@ -74,25 +75,31 @@
         <div class="about-grid">
           <div>
             <div class="copy-stack">
-              <p>I am Ezekiel Narh, a BSc Information Technology student at Pentecost University. My work sits between software engineering, UI/UX design, and graphic design, giving me room to think about systems and aesthetics at the same time.</p>
-              <p>Through Nakiel Creative, I design interface prototypes, flyers, branding assets, and motion graphics. On the software side, I build responsive interfaces, experiment with Three.js, and keep strengthening my networking and database fundamentals after completing my internship with Volta River Authority.</p>
+              <p>I am Ezekiel Narh, a BSc Information Technology student at Pentecost University. My work sits between full-stack software engineering, UI/UX design, and graphic design — giving me room to think about systems and aesthetics at the same time.</p>
+              <p>I have built production platforms including KeyConnect, a secure encrypted messaging app, and Homewise, a full-stack home service marketplace with both web and mobile applications. Through Nakiel Creative, I design interface prototypes, flyers, branding assets, and motion graphics.</p>
             </div>
             <div class="tags" aria-label="Core skills">
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
               <span class="tag">JavaScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Flutter</span>
               <span class="tag">Three.js</span>
-              <span class="tag">Photoshop</span>
               <span class="tag">Figma</span>
+              <span class="tag">Photoshop</span>
               <span class="tag">UI/UX Design</span>
               <span class="tag">Networking</span>
             </div>
           </div>
           <div class="highlight-grid">
             <article class="highlight-card hoverable">
-              <div class="card-icon">FE</div>
-              <h3>Software Dev</h3>
-              <p>Responsive web builds with interactive UI, animation, and thoughtful frontend structure.</p>
+              <div class="card-icon">FS</div>
+              <h3>Full-Stack Dev</h3>
+              <p>Production-grade platforms with backend, database, auth and responsive frontends — built and shipped.</p>
             </article>
             <article class="highlight-card hoverable">
               <div class="card-icon">PS</div>
@@ -107,7 +114,7 @@
             <article class="highlight-card hoverable">
               <div class="card-icon">IT</div>
               <h3>Industry Practice</h3>
-              <p>Completed a Volta River Authority internship with a practical IT and design mindset.</p>
+              <p>VRA internship plus two independently developed and deployed software platforms.</p>
             </article>
           </div>
         </div>
@@ -171,9 +178,63 @@
             <p class="kicker">Projects</p>
             <h2 class="section-title">Web work with atmosphere and function.</h2>
           </div>
-            <p class="section-note">A focused mix of shipped web experiences and UI/UX prototype work.</p>
+            <p class="section-note">Full-stack platforms, 3D experiences, and UI/UX prototype work — all shipped.</p>
         </div>
         <div class="projects-grid">
+
+          <!-- KeyConnect -->
+          <article class="project-card hoverable project-card--featured">
+            <div class="project-img project-img--keyconnect">
+              <img src="assets/keyconnect-admin.png" alt="KeyConnect admin dashboard preview" />
+            </div>
+            <div class="project-body">
+              <span class="type-label">Secure Messaging Platform</span>
+              <h3>KeyConnect</h3>
+              <p>A secure messaging platform built on public-key cryptography. Users communicate through encrypted messages with role-based dashboards, admin controls, security logs and broadcast messaging — privacy by design.</p>
+              <div class="stack">
+                <span>Supabase</span>
+                <span>PostgreSQL</span>
+                <span>Supabase Auth</span>
+                <span>Public-Key Crypto</span>
+                <span>RBAC</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-primary hoverable" href="https://keyconnect-web.onrender.com/" target="_blank" rel="noreferrer">View Live Project ↗</a>
+                <a class="btn hoverable" href="https://github.com/CoddyNa" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Homewise -->
+          <article class="project-card hoverable project-card--featured">
+            <div class="project-img project-img--homewise">
+              <img src="assets/homewise-web.jpg" alt="Homewise web application preview on tablet and desktop" />
+            </div>
+            <div class="project-body">
+              <span class="type-label">Home Service Marketplace</span>
+              <div class="project-platform-badges">
+                <span class="platform-badge platform-badge--web">Web App</span>
+                <span class="platform-badge platform-badge--mobile">Mobile App</span>
+              </div>
+              <h3>Homewise</h3>
+              <p>A full-stack home service marketplace connecting customers with service providers. Includes role-based dashboards, booking management, authentication, and a companion Flutter mobile app designed end-to-end in Figma.</p>
+              <div class="stack">
+                <span>React</span>
+                <span>Vite</span>
+                <span>Express.js</span>
+                <span>Supabase</span>
+                <span>PostgreSQL</span>
+                <span>Flutter</span>
+                <span>Figma</span>
+                <span>Vercel</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-primary hoverable" href="https://home-service-booking-system-eight.vercel.app/" target="_blank" rel="noreferrer">View Web App ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SRC Sports Academy -->
           <article class="project-card hoverable">
             <div class="project-img"><img src="assets/src-sports-academy.png" alt="SRC Sports Academy website preview" /></div>
             <div class="project-body">
@@ -184,6 +245,8 @@
               <a class="btn hoverable" href="https://src-puit-24110052-web.vercel.app/" target="_blank" rel="noreferrer">Live Site</a>
             </div>
           </article>
+
+          <!-- Data Communication 3D -->
           <article class="project-card hoverable">
             <div class="project-img"><img src="assets/data-communication-3d.png" alt="Data Communication 3D website preview" /></div>
             <div class="project-body">
@@ -194,6 +257,8 @@
               <a class="btn hoverable" href="https://data-communication-assignment-u6u4.vercel.app/" target="_blank" rel="noreferrer">Live Site</a>
             </div>
           </article>
+
+          <!-- Figma Prototype -->
           <article class="project-card hoverable">
             <div class="project-img"><img src="assets/FigmaShot1.png" alt="Figma UI/UX prototype preview" /></div>
             <div class="project-body">
@@ -204,6 +269,7 @@
               <a class="btn hoverable" href="https://www.figma.com/proto/0yT1Y1cTa9yymZ29c2XkoM/Untitled?node-id=46-84&amp;t=YLjPtTKCJEg5GQHs-1" target="_blank" rel="noreferrer">View Prototype</a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -228,6 +294,20 @@
             </div>
           </article>
           <article class="design-card hoverable">
+            <div class="design-image"><img src="assets/homewise-mobile.jpg" alt="Homewise mobile app Figma mockup — home services, made simple" /></div>
+            <div class="design-body">
+              <h3>Homewise — Mobile App UI</h3>
+              <span class="status-badge">Figma</span>
+            </div>
+          </article>
+          <article class="design-card hoverable">
+            <div class="design-image"><img src="assets/homewise-web.jpg" alt="Homewise web application Figma mockup on tablet and desktop" /></div>
+            <div class="design-body">
+              <h3>Homewise — Web App UI</h3>
+              <span class="status-badge">Figma</span>
+            </div>
+          </article>
+          <article class="design-card hoverable">
             <div class="design-image"><img src="assets/hajeni-laundry.png" alt="Hajeni Laundry campaign Photoshop work in progress" /></div>
             <div class="design-body">
               <h3>Hajeni Laundry Campaign</h3>
@@ -241,6 +321,87 @@
               <span class="status-badge">Completed</span>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Experience</p>
+            <h2 class="section-title">Practical development, real applications.</h2>
+          </div>
+          <p class="section-note">Independent software projects and professional internship experience.</p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="exp-timeline">
+
+          <!-- KeyConnect -->
+          <article class="exp-entry">
+            <div class="exp-marker">
+              <div class="exp-dot"></div>
+              <div class="exp-line"></div>
+            </div>
+            <div class="exp-card hoverable">
+              <div class="exp-card-top">
+                <div class="exp-icon" aria-hidden="true">KC</div>
+                <div class="exp-meta-block">
+                  <span class="exp-role-type">Independent Software Development Project</span>
+                  <h3 class="exp-title">Full-Stack Developer — KeyConnect</h3>
+                </div>
+                <span class="type-label">Web Platform</span>
+              </div>
+              <p class="exp-desc">Designed and developed a secure messaging platform focused on encrypted private communication. Integrated Supabase and PostgreSQL for backend and database services, implemented public-key-based message encryption, built role-based user and administrator dashboards, and developed security logging and account management functionality.</p>
+              <div class="exp-tags">
+                <span>Supabase</span><span>PostgreSQL</span><span>Supabase Auth</span><span>Public-Key Cryptography</span><span>RBAC</span>
+              </div>
+              <a class="btn btn-primary hoverable exp-link" href="https://keyconnect-web.onrender.com/" target="_blank" rel="noreferrer">View Live Project ↗</a>
+            </div>
+          </article>
+
+          <!-- Homewise -->
+          <article class="exp-entry">
+            <div class="exp-marker">
+              <div class="exp-dot"></div>
+              <div class="exp-line"></div>
+            </div>
+            <div class="exp-card hoverable">
+              <div class="exp-card-top">
+                <div class="exp-icon" aria-hidden="true">HW</div>
+                <div class="exp-meta-block">
+                  <span class="exp-role-type">Independent Software Development Project</span>
+                  <h3 class="exp-title">Full-Stack Developer — Homewise</h3>
+                </div>
+                <span class="type-label">Web &amp; Mobile</span>
+              </div>
+              <p class="exp-desc">Designed and developed a home service marketplace consisting of both a web and mobile application. Led UI/UX design in Figma, built the frontend with React and Vite, integrated Express.js for the backend, managed database design with Supabase and PostgreSQL, and handled authentication, role-based access, and deployment on Vercel and Render.</p>
+              <div class="exp-tags">
+                <span>React</span><span>Vite</span><span>Express.js</span><span>Supabase</span><span>PostgreSQL</span><span>Flutter</span><span>Figma</span><span>Vercel</span>
+              </div>
+              <a class="btn btn-primary hoverable exp-link" href="https://home-service-booking-system-eight.vercel.app/" target="_blank" rel="noreferrer">View Web App ↗</a>
+            </div>
+          </article>
+
+          <!-- VRA Internship -->
+          <article class="exp-entry exp-entry--internship">
+            <div class="exp-marker">
+              <div class="exp-dot exp-dot--internship"></div>
+            </div>
+            <div class="exp-card exp-card--internship hoverable">
+              <div class="exp-card-top">
+                <div class="exp-icon exp-icon--org" aria-hidden="true">VRA</div>
+                <div class="exp-meta-block">
+                  <span class="exp-role-type">Professional Internship</span>
+                  <h3 class="exp-title">IT Intern — Volta River Authority</h3>
+                </div>
+                <span class="live-badge">Completed</span>
+              </div>
+              <p class="exp-desc">Completed a professional IT internship at Volta River Authority, one of Ghana's leading energy organisations. Applied software, networking, and design skills inside a real enterprise environment, gaining hands-on experience with IT operations, data systems, and professional practice.</p>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -278,13 +439,6 @@
             <p>Freelance graphic design brand for flyers, branding, art direction, and motion graphics.</p>
             <span class="edu-meta">Creative Studio</span>
           </article>
-        </div>
-        <div class="internship">
-          <div>
-            <h3>Internship Completed: Volta River Authority</h3>
-            <p>Completed an internship with VRA, applying my IT, design, and software mindset inside a professional Ghanaian energy organization.</p>
-          </div>
-          <span class="live-badge">Completed</span>
         </div>
       </div>
     </section>
